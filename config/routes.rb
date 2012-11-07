@@ -1,5 +1,11 @@
 Universily::Application.routes.draw do
+  get "home/index"
+
+  resources :departments
+
   resources :students
+  
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

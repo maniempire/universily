@@ -37,7 +37,8 @@
   </div>
   <div class="field">
     <%= f.label :department_id %><br />
-    <%= f.number_field :department_id %>
+  
+	<%= f.select(:department_id, Department.all.collect {|u| [u.description, u.id]}, :prompt => 'Select a Department') %>
   </div>
   <div class="actions">
     <%= f.submit %>
